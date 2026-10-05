@@ -1,0 +1,260 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+Home | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ HERO ============ -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-badge">
+            DMMMSU-NLUC &middot; College of Information Systems
+        </p>
+
+        <h1>
+            Five Students.
+            <span>One Journey.</span>
+        </h1>
+
+        <p class="hero-text">
+            We are five Information Systems students building our
+            skills in web development, programming, and technology.
+            This portfolio brings together our profiles, the tools we
+            are learning, the projects we are working on, and the
+            interests that keep us curious outside the classroom.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{% url 'members' %}"
+               class="button button-light">
+                Meet Our Team
+            </a>
+
+            <a href="{% url 'projects' %}"
+               class="button button-inverse">
+                View Projects
+            </a>
+
+        </div>
+
+        <!-- quick facts -->
+        <div class="hero-facts">
+
+            <div class="hero-fact">
+                <strong>5</strong>
+                <span>Members</span>
+            </div>
+
+            <div class="hero-fact">
+                <strong>7</strong>
+                <span>Pages</span>
+            </div>
+
+            <div class="hero-fact">
+                <strong>6</strong>
+                <span>Technologies</span>
+            </div>
+
+            <div class="hero-fact">
+                <strong>3</strong>
+                <span>Projects</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ WHAT THIS SITE IS ABOUT ============ -->
+
+<section class="intro-section">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <span class="eyebrow">
+                Our Student Portfolio
+            </span>
+
+            <h2 class="section-title">
+                A website built to learn, share, and grow
+            </h2>
+
+            <p class="section-intro">
+                This website presents the profiles of five students from
+                the College of Information Systems. Every page was
+                created to show what we have learned so far and what we
+                are still working on.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <!-- Our Skills -->
+            <article class="feature-card">
+
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    01
+                </span>
+
+                <h3>
+                    Our Skills
+                </h3>
+
+                <p>
+                    We are building our knowledge in HTML, CSS, Python,
+                    Django, Git, Ai, and GitHub &mdash; the tools we use to
+                    turn ideas into working websites.
+                </p>
+
+                <a href="{% url 'skills' %}"
+                   class="feature-link">
+                    See our skills &rarr;
+                </a>
+
+            </article>
+
+
+            <!-- Our Projects -->
+            <article class="feature-card">
+
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    02
+                </span>
+
+                <h3>
+                    Our Projects
+                </h3>
+
+                <p>
+                    We showcase the school projects we have completed so
+                    far, together with the ideas we plan to build next.
+                </p>
+
+                <a href="{% url 'projects' %}"
+                   class="feature-link">
+                    View our projects &rarr;
+                </a>
+
+            </article>
+
+
+            <!-- Our Journey -->
+            <article class="feature-card">
+
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    03
+                </span>
+
+                <h3>
+                    Our Journey
+                </h3>
+
+                <p>
+                    We started with the basics and we keep learning,
+                    practising, and improving our skills as IS students.
+                </p>
+
+                <a href="{% url 'about' %}"
+                   class="feature-link">
+                    Read our story &rarr;
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ MEET THE TEAM / HOBBIES STRIP ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <span class="eyebrow">
+                Beyond the Screen
+            </span>
+
+            <h2 class="section-title">
+                Get to know the people behind the code
+            </h2>
+
+            <p class="section-intro">
+                Every member has a profile page and a hobby photo, so you
+                can see both what we study and what we enjoy doing in our
+                free time.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>
+                    Member Profiles
+                </h3>
+                <p>
+                    Names, programs, skills, and interests for all five of
+                    us in one place.
+                </p>
+                <a href="{% url 'members' %}"
+                   class="feature-link">
+                    Meet our members &rarr;
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <h3>
+                    Our Interests
+                </h3>
+                <p>
+                    Anime, online games, Marvel, basketball, chess,
+                    and PC hardware are part of life outside class.
+                </p>
+                <a href="{% url 'gallery' %}"
+                   class="feature-link">
+                    Open the gallery &rarr;
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <h3>
+                    Talk to Us
+                </h3>
+                <p>
+                    Questions about the project, our school, or our work?
+                    Send us a message.
+                </p>
+                <a href="{% url 'contact' %}"
+                   class="feature-link">
+                    Contact the group &rarr;
+                </a>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

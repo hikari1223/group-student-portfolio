@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        Group Student Portfolio
+        {% endblock %}
+    </title>
+
+    <meta name="description"
+          content="Group Student Portfolio is a multi-page website created by five Information Systems students at DMMMSU-NLUC using Django, HTML, and CSS.">
+
+    <link rel="stylesheet"
+          href="{% static 'portfolio/css/style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- lets keyboard users jump past the navigation -->
+    <a class="skip-link"
+       href="#main-content">
+        Skip to main content
+    </a>
+
+    {% include 'portfolio/includes/navbar.html' %}
+
+    <main id="main-content">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    {% include 'portfolio/includes/footer.html' %}
+
+</body>
+
+</html>

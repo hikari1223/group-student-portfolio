@@ -1,0 +1,74 @@
+<!-- Reusable navbar. Every link is built with the Django url tag,
+     so no page URL is hard-coded. -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="{% url 'home' %}"
+           class="logo">
+
+            <span class="logo-mark"
+                  aria-hidden="true">
+                GSP
+            </span>
+
+            <span class="logo-text">
+
+                <span class="logo-title">
+                    Group Student Portfolio
+                </span>
+
+                <span class="logo-subtitle">
+                    DMMMSU-NLUC
+                </span>
+
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links"
+             aria-label="Main navigation">
+
+            <a href="{% url 'home' %}"
+               {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %}>
+                Home
+            </a>
+
+            <a href="{% url 'about' %}"
+               {% if request.resolver_match.url_name == 'about' %}aria-current="page"{% endif %}>
+                About
+            </a>
+
+            <a href="{% url 'members' %}"
+               {% if request.resolver_match.url_name == 'members' %}aria-current="page"{% endif %}>
+                Members
+            </a>
+
+            <a href="{% url 'skills' %}"
+               {% if request.resolver_match.url_name == 'skills' %}aria-current="page"{% endif %}>
+                Skills
+            </a>
+
+            <a href="{% url 'projects' %}"
+               {% if request.resolver_match.url_name == 'projects' %}aria-current="page"{% endif %}>
+                Projects
+            </a>
+
+            <a href="{% url 'gallery' %}"
+               {% if request.resolver_match.url_name == 'gallery' %}aria-current="page"{% endif %}>
+                Gallery
+            </a>
+
+            <a href="{% url 'contact' %}"
+               class="nav-cta"
+               {% if request.resolver_match.url_name == 'contact' %}aria-current="page"{% endif %}>
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>

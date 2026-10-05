@@ -1,0 +1,331 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+Skills | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        Our Skills
+    </h1>
+
+    <p>
+        The technologies we are learning and using to build this
+        portfolio website.
+    </p>
+
+</section>
+
+
+<!-- ============ SKILL CARDS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Technologies We Use
+        </h2>
+
+        <p class="section-intro mb-lg">
+            These are the tools behind every page of this website. The
+            bars below are a simple visual guide to how far each of us
+            has gone with them so far.
+        </p>
+
+
+        <div class="skills-grid">
+
+            <!-- HTML -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    HTML
+                </span>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Creating the structure of our web pages using
+                    semantic HTML, so the content stays organised and
+                    readable for everyone.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="HTML: 4 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Structure and layout
+                </span>
+
+            </article>
+
+
+            <!-- CSS -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    CSS
+                </span>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Designing responsive and attractive pages with grids,
+                    spacing, shadows, and hover states that work on desktop,
+                    tablet, and mobile.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="CSS: 4 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Design and responsiveness
+                </span>
+
+            </article>
+
+
+            <!-- PYTHON -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    PY
+                </span>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Learning programming and problem solving with Python,
+                    the language that powers the backend of this website.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="Python: 3 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Programming and logic
+                </span>
+
+            </article>
+
+
+            <!-- DJANGO -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    DJ
+                </span>
+
+                <h3>
+                    Django
+                </h3>
+
+                <p>
+                    Developing this website with the Django framework:
+                    views, URLs, templates, template inheritance, and
+                    static files.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="Django: 3 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Framework and backend
+                </span>
+
+            </article>
+
+
+            <!-- GIT -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    GIT
+                </span>
+
+                <h3>
+                    Git
+                </h3>
+
+                <p>
+                    Managing project versions and tracking changes, so we
+                    can see what each of us contributed to the project.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="Git: 3 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Version control
+                </span>
+
+            </article>
+
+
+            <!-- GITHUB -->
+            <article class="skill-card">
+
+                <span class="skill-icon"
+                      aria-hidden="true">
+                    GH
+                </span>
+
+                <h3>
+                    GitHub
+                </h3>
+
+                <p>
+                    Collaborating online, storing our project in one place,
+                    and reviewing each other&rsquo;s work before it is
+                    added.
+                </p>
+
+                <div class="skill-level"
+                     role="img"
+                     aria-label="GitHub: 3 out of 5">
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span class="on"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="skill-level-note">
+                    Collaboration and hosting
+                </span>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ HOW WE USE THEM ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="text-center mb-lg">
+
+            <span class="eyebrow">
+                Putting It Together
+            </span>
+
+            <h2 class="section-title">
+                How these skills work together
+            </h2>
+
+            <p class="section-intro">
+                Each technology handles one part of the website, from the
+                page layout to the server that sends it to your browser.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    1
+                </span>
+                <h3>
+                    Django runs the site
+                </h3>
+                <p>
+                    Python and Django receive each request, choose the
+                    right view, and load the correct page.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    2
+                </span>
+                <h3>
+                    Templates build the pages
+                </h3>
+                <p>
+                    Each page extends one base template, so the navbar,
+                    footer, and stylesheet stay consistent everywhere.
+                </p>
+            </article>
+
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    3
+                </span>
+                <h3>
+                    HTML and CSS style it
+                </h3>
+                <p>
+                    Our own stylesheet turns the structure into a clean,
+                    professional, and responsive design.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

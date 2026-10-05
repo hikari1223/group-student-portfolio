@@ -1,0 +1,228 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+Contact | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        Contact Us
+    </h1>
+
+    <p>
+        Have a question about the project or want to reach the group?
+        Send us a message.
+    </p>
+
+</section>
+
+
+<!-- ============ CONTACT INFO + FORM ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <!-- Contact information -->
+            <div class="contact-info">
+
+                <span class="eyebrow">
+                    Our Information
+                </span>
+
+                <h2>
+                    Where to Find Us
+                </h2>
+
+                <p>
+                    We are Information Systems students at DMMMSU-NLUC.
+                    The fastest way to reach the group is through the
+                    form on this page.
+                </p>
+
+                <ul class="info-list">
+
+                    <li>
+                        <span class="info-icon"
+                              aria-hidden="true">
+                            S
+                        </span>
+                        <span class="info-text">
+                            <strong>
+                                School
+                            </strong>
+                            <span>
+                                DMMMSU-NLUC
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="info-icon"
+                              aria-hidden="true">
+                            C
+                        </span>
+                        <span class="info-text">
+                            <strong>
+                                College
+                            </strong>
+                            <span>
+                                College of Information Systems
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="info-icon"
+                              aria-hidden="true">
+                            P
+                        </span>
+                        <span class="info-text">
+                            <strong>
+                                Program
+                            </strong>
+                            <span>
+                                Information Systems
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="info-icon"
+                              aria-hidden="true">
+                            L
+                        </span>
+                        <span class="info-text">
+                            <strong>
+                                Location
+                            </strong>
+                            <span>
+                                Sapilang, Bacnotan, La Union, 2515
+                                Philippines
+                            </span>
+                        </span>
+                    </li>
+
+                    <li>
+                        <span class="info-icon"
+                              aria-hidden="true">
+                            W
+                        </span>
+                        <span class="info-text">
+                            <strong>
+                                Website
+                            </strong>
+                            <span>
+                                Group Student Portfolio
+                            </span>
+                        </span>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Message form -->
+            <div class="contact-form">
+
+                <span class="eyebrow">
+                    Send a Message
+                </span>
+
+                <h2>
+                    Contact Form
+                </h2>
+
+                <p>
+                    Fill in the form below with your name, email, and
+                    message.
+                </p>
+
+                <!--
+                  Front-end only form. It is the same simple form the
+                  original project used, kept without database
+                  functionality on purpose.
+                -->
+                <form method="post"
+                      action="#">
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="name">
+                                Name
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   placeholder="Enter your name"
+                                   autocomplete="name"
+                                   required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="email">
+                                Email
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   placeholder="Enter your email"
+                                   autocomplete="email"
+                                   required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                            <span class="hint">
+                                (tell us what you need help with)
+                            </span>
+                        </label>
+
+                        <textarea id="message"
+                                  name="message"
+                                  rows="6"
+                                  placeholder="Enter your message"
+                                  required></textarea>
+
+                    </div>
+
+                    <button type="submit"
+                            class="button">
+                        Send Message
+                    </button>
+
+                    <p class="form-note">
+                        This is a demonstration form for our class project.
+                        No information is stored on the server.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

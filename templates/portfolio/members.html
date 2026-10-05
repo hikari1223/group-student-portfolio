@@ -1,0 +1,555 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}
+Members | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        Our Members
+    </h1>
+
+    <p>
+        Meet the five Information Systems students behind this portfolio.
+        Select a card, or use &ldquo;View Profile&rdquo; to jump to the
+        full details of each member.
+    </p>
+
+</section>
+
+
+<!-- ============ PROFILE CARDS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            The Group
+        </h2>
+
+        <p class="section-intro mb-lg">
+            Five BSIS and BSIT students sharing the same goal: to learn
+            how technology is built and to keep building.
+        </p>
+
+
+        <div class="member-grid">
+
+            <!-- EPHRAIM -->
+            <article class="member-card">
+
+                <div class="member-photo">
+
+                    <img src="{% static 'portfolio/images/ephraim.jpg' %}"
+                         alt="Profile photo of Ephraim B. Balbalec Jr."
+                         width="596"
+                         height="574"
+                         loading="lazy">
+
+                    <span class="member-initial"
+                          aria-hidden="true">
+                        E
+                    </span>
+
+                </div>
+
+                <div class="member-content">
+
+                    <h3>
+                        Ephraim B. Balbalec Jr.
+                    </h3>
+
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
+
+                    <p class="member-about">
+                        Interested in web development, computers, and
+                        technology.
+                    </p>
+
+                    <span class="tag-label">
+                        Interests
+                    </span>
+
+                    <div class="tags member-interests">
+                        <span>Anime</span>
+                        <span>Gaming</span>
+                        <span>PC Hardware</span>
+                        <span>Technology</span>
+                    </div>
+
+                    <a href="#ephraim"
+                       class="button button-sm button-block mt-lg">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARJAY -->
+            <article class="member-card">
+
+                <div class="member-photo">
+
+                    <img src="{% static 'portfolio/images/arjay.jpg' %}"
+                         alt="Profile photo of Arjay M. Corpuz"
+                         width="1184"
+                         height="1682"
+                         loading="lazy">
+
+                    <span class="member-initial"
+                          aria-hidden="true">
+                        A
+                    </span>
+
+                </div>
+
+                <div class="member-content">
+
+                    <h3>
+                        Arjay M. Corpuz
+                    </h3>
+
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
+
+                    <p class="member-about">
+                        Interested in web development, computers, and
+                        technology.
+                    </p>
+
+                    <span class="tag-label">
+                        Interests
+                    </span>
+
+                    <div class="tags member-interests">
+                        <span>Online Games</span>
+                        <span>Work</span>
+                    </div>
+
+                    <a href="#arjay"
+                       class="button button-sm button-block mt-lg">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VICTOR -->
+            <article class="member-card">
+
+                <div class="member-photo">
+
+                    <img src="{% static 'portfolio/images/victor.jpg' %}"
+                         alt="Profile photo of Victor Joseph M. Abad"
+                         width="1438"
+                         height="1416"
+                         loading="lazy">
+
+                    <span class="member-initial"
+                          aria-hidden="true">
+                        V
+                    </span>
+
+                </div>
+
+                <div class="member-content">
+
+                    <h3>
+                        Victor Joseph M. Abad
+                    </h3>
+
+                    <span class="member-program">
+                        BSIT Student
+                    </span>
+
+                    <p class="member-about">
+                        Interested in web development, computers, and
+                        technology.
+                    </p>
+
+                    <span class="tag-label">
+                        Interests
+                    </span>
+
+                    <div class="tags member-interests">
+                        <span>Marvel</span>
+                        <span>Gaming</span>
+                        <span>Foreign Languages</span>
+                        <span>Technology</span>
+                    </div>
+
+                    <a href="#victor"
+                       class="button button-sm button-block mt-lg">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- LORENZ -->
+            <article class="member-card">
+
+                <div class="member-photo">
+
+                    <img src="{% static 'portfolio/images/lorenz.jpg' %}"
+                         alt="Profile photo of Lorenz Dave Natura"
+                         width="611"
+                         height="672"
+                         loading="lazy">
+
+                    <span class="member-initial"
+                          aria-hidden="true">
+                        L
+                    </span>
+
+                </div>
+
+                <div class="member-content">
+
+                    <h3>
+                        Lorenz Dave Natura
+                    </h3>
+
+                    <span class="member-program">
+                        BSIT Student
+                    </span>
+
+                    <p class="member-about">
+                        Interested in web development, computers, and
+                        technology.
+                    </p>
+
+                    <span class="tag-label">
+                        Interests
+                    </span>
+
+                    <div class="tags member-interests">
+                        <span>Gaming</span>
+                        <span>Basketball</span>
+                        <span>Mobile Legends</span>
+                    </div>
+
+                    <a href="#lorenz"
+                       class="button button-sm button-block mt-lg">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- JUSTINE -->
+            <article class="member-card">
+
+                <div class="member-photo">
+
+                    <img src="{% static 'portfolio/images/justine.jpg' %}"
+                         alt="Profile photo of Justine Howard P. Resurreccion"
+                         width="885"
+                         height="960"
+                         loading="lazy">
+
+                    <span class="member-initial"
+                          aria-hidden="true">
+                        J
+                    </span>
+
+                </div>
+
+                <div class="member-content">
+
+                    <h3>
+                        Justine Howard P. Resurreccion
+                    </h3>
+
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
+
+                    <p class="member-about">
+                        Interested in software development and basic
+                        computer hardware.
+                    </p>
+
+                    <span class="tag-label">
+                        Interests
+                    </span>
+
+                    <div class="tags member-interests">
+                        <span>Gaming</span>
+                        <span>Chess</span>
+                        <span>Mobile Legends</span>
+                    </div>
+
+                    <a href="#justine"
+                       class="button button-sm button-block mt-lg">
+                        View Profile
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ FULL PROFILE DETAILS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="profile-details">
+
+            <span class="eyebrow">
+                Member Details
+            </span>
+
+            <h2 class="section-title">
+                Full Profiles
+            </h2>
+
+            <p class="section-intro">
+                More information about each member, including the skills
+                and interests they shared with the group.
+            </p>
+
+
+            <!-- EPHRAIM -->
+            <article class="profile-box"
+                     id="ephraim">
+
+                <h3>
+                    Ephraim B. Balbalec Jr.
+                </h3>
+
+                <span class="profile-program">
+                    BSIS Student
+                </span>
+
+                <p>
+                    I am a second-year IS student interested in web
+                    development, computers, and technology.
+                </p>
+
+                <h4>
+                    Skills
+                </h4>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Git</span>
+                </div>
+
+                <h4>
+                    Interests
+                </h4>
+
+                <div class="tags">
+                    <span>Anime</span>
+                    <span>Gaming</span>
+                    <span>PC Hardware</span>
+                    <span>Technology</span>
+                </div>
+
+            </article>
+
+
+            <!-- ARJAY -->
+            <article class="profile-box"
+                     id="arjay">
+
+                <h3>
+                    Arjay M. Corpuz
+                </h3>
+
+                <span class="profile-program">
+                    BSIS Student
+                </span>
+
+                <p>
+                    I am a second-year IS student interested in web
+                    development, computers, and technology.
+                </p>
+
+                <h4>
+                    Skills
+                </h4>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Git</span>
+                </div>
+
+                <h4>
+                    Interests
+                </h4>
+
+                <div class="tags">
+                    <span>Online Games</span>
+                    <span>Work</span>
+                </div>
+
+            </article>
+
+
+            <!-- VICTOR -->
+            <article class="profile-box"
+                     id="victor">
+
+                <h3>
+                    Victor Joseph M. Abad
+                </h3>
+
+                <span class="profile-program">
+                    BSIT Student
+                </span>
+
+                <p>
+                    I am a second-year IS student interested in web
+                    development, computers, and technology.
+                </p>
+
+                <h4>
+                    Skills
+                </h4>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Git</span>
+                </div>
+
+                <h4>
+                    Interests
+                </h4>
+
+                <div class="tags">
+                    <span>Marvel</span>
+                    <span>Gaming</span>
+                    <span>Foreign Languages</span>
+                    <span>Technology</span>
+                </div>
+
+            </article>
+
+
+            <!-- LORENZ -->
+            <article class="profile-box"
+                     id="lorenz">
+
+                <h3>
+                    Lorenz Dave Natura
+                </h3>
+
+                <span class="profile-program">
+                    BSIT Student
+                </span>
+
+                <p>
+                    I am a second-year IS student interested in web
+                    development, computers, and technology.
+                </p>
+
+                <h4>
+                    Skills
+                </h4>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Git</span>
+                </div>
+
+                <h4>
+                    Interests
+                </h4>
+
+                <div class="tags">
+                    <span>Gaming</span>
+                    <span>Basketball</span>
+                    <span>Mobile Legends</span>
+                </div>
+
+            </article>
+
+
+            <!-- JUSTINE -->
+            <article class="profile-box"
+                     id="justine">
+
+                <h3>
+                    Justine Howard P. Resurreccion
+                </h3>
+
+                <span class="profile-program">
+                    BSIS Student
+                </span>
+
+                <p>
+                    I am a second-year student interested in software
+                    development and basic computer hardware.
+                </p>
+
+                <h4>
+                    Skills
+                </h4>
+
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>Git</span>
+                </div>
+
+                <h4>
+                    Interests
+                </h4>
+
+                <div class="tags">
+                    <span>Gaming</span>
+                    <span>Chess</span>
+                    <span>Mobile Legends</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,281 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+Projects | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        Our Projects
+    </h1>
+
+    <p>
+        The projects we have completed and the ideas we are planning for
+        the future.
+    </p>
+
+</section>
+
+
+<!-- ============ PROJECT CARDS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            What We Built and Planned
+        </h2>
+
+        <p class="section-intro mb-lg">
+            Every project here was created for a school requirement or as
+            practice for the skills we want to improve.
+        </p>
+
+
+        <div class="project-grid">
+
+            <!-- Group Student Portfolio -->
+            <article class="project-card">
+
+                <div class="project-banner"
+                     aria-hidden="true"></div>
+
+                <div class="project-body">
+
+                    <span class="status-badge">
+                        Completed
+                    </span>
+
+                    <h3 class="mt-lg">
+                        Group Student Portfolio
+                    </h3>
+
+                    <p>
+                        A multi-page portfolio website created as a group
+                        project. It uses Django for the views and URLs,
+                        HTML templates for the structure, and CSS for the
+                        design &mdash; the website you are reading now.
+                    </p>
+
+                    <div class="project-meta">
+
+                        <dl class="meta-row">
+                            <dt>Type</dt>
+                            <dd>Group Website</dd>
+                        </dl>
+
+                        <dl class="meta-row">
+                            <dt>Team</dt>
+                            <dd>Five Members</dd>
+                        </dl>
+
+                    </div>
+
+                    <span class="tag-label mt-lg">
+                        Technologies Used
+                    </span>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Django Project -->
+            <article class="project-card">
+
+                <div class="project-banner alt"
+                     aria-hidden="true"></div>
+
+                <div class="project-body">
+
+                    <span class="status-badge">
+                        Completed
+                    </span>
+
+                    <h3 class="mt-lg">
+                        Django Project
+                    </h3>
+
+                    <p>
+                        A Django-based school project created to practise
+                        the core parts of the framework: views, URL routing,
+                        template inheritance, and serving static files.
+                    </p>
+
+                    <div class="project-meta">
+
+                        <dl class="meta-row">
+                            <dt>Type</dt>
+                            <dd>Class Project</dd>
+                        </dl>
+
+                        <dl class="meta-row">
+                            <dt>Focus</dt>
+                            <dd>Backend Basics</dd>
+                        </dl>
+
+                    </div>
+
+                    <span class="tag-label mt-lg">
+                        Technologies Used
+                    </span>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>Templates</span>
+                        <span>SQLite</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Future IS Project -->
+            <article class="project-card">
+
+                <div class="project-banner warm"
+                     aria-hidden="true"></div>
+
+                <div class="project-body">
+
+                    <span class="status-badge planned">
+                        Planned
+                    </span>
+
+                    <h3 class="mt-lg">
+                        Future IS Project
+                    </h3>
+
+                    <p>
+                        A future project idea that will help us improve our
+                        programming and system development skills, and
+                        give us more experience working with real
+                        information.
+                    </p>
+
+                    <div class="project-meta">
+
+                        <dl class="meta-row">
+                            <dt>Type</dt>
+                            <dd>Future Project</dd>
+                        </dl>
+
+                        <dl class="meta-row">
+                            <dt>Stage</dt>
+                            <dd>Idea &amp; Planning</dd>
+                        </dl>
+
+                    </div>
+
+                    <span class="tag-label mt-lg">
+                        Focus Areas
+                    </span>
+
+                    <div class="tags">
+                        <span>Programming</span>
+                        <span>Technology</span>
+                        <span>System Development</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ WHAT WE LEARNED ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="split">
+
+            <div class="prose">
+
+                <span class="eyebrow">
+                    Reflection
+                </span>
+
+                <h2 class="section-title">
+                    What building these projects taught us
+                </h2>
+
+                <p class="lead">
+                    The hardest part was rarely the coding itself. It was
+                    agreeing on the structure, naming files clearly, and
+                    making sure everyone&rsquo;s work still worked
+                    together.
+                </p>
+
+                <ul class="fact-list">
+                    <li>Plan the pages and URLs before writing any code</li>
+                    <li>Use one base template instead of repeating HTML</li>
+                    <li>Keep names, spacing, and code style consistent</li>
+                    <li>Test the site on a phone as well as a laptop</li>
+                    <li>Commit small changes so mistakes are easy to undo</li>
+                    <li>Ask each other for help when a page breaks</li>
+                </ul>
+
+            </div>
+
+            <div>
+
+                <div class="panel">
+
+                    <h2>
+                        Next Steps
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Improve the design of every page on smaller
+                            screens.
+                        </li>
+                        <li>
+                            Add more pages and real content from our
+                            subjects.
+                        </li>
+                        <li>
+                            Learn how to use a database so the site can
+                            store data.
+                        </li>
+                        <li>
+                            Practise Python and Django problem solving
+                            outside of class.
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

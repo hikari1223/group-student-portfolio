@@ -1,0 +1,256 @@
+{% extends 'portfolio/base.html' %}
+
+{% block title %}
+About Us | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        About Our Group
+    </h1>
+
+    <p>
+        Five Information Systems students from DMMMSU-NLUC,
+        learning technology by building something real.
+    </p>
+
+</section>
+
+
+<!-- ============ QUICK FACTS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="fact-grid">
+
+            <div class="fact-card">
+                <span class="fact-value">5</span>
+                <span class="fact-label">Group Members</span>
+            </div>
+
+            <div class="fact-card">
+                <span class="fact-value">7</span>
+                <span class="fact-label">Website Pages</span>
+            </div>
+
+            <div class="fact-card">
+                <span class="fact-value">6</span>
+                <span class="fact-label">Technologies Used</span>
+            </div>
+
+            <div class="fact-card">
+                <span class="fact-value">1</span>
+                <span class="fact-label">Shared Goal</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ WHO WE ARE + WHAT WE LEARNED ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="split">
+
+            <!-- Left column: the story -->
+            <div class="prose">
+
+                <span class="eyebrow">
+                    Who We Are
+                </span>
+
+                <h2 class="section-title">
+                    Five students, one group project
+                </h2>
+
+                <p class="lead">
+                    We are a group of five students studying
+                    Information Systems-related programs at
+                    DMMMSU-NLUC, under the College of Information
+                    Technology. We come from different backgrounds,
+                    but we share the same interest in how technology
+                    works behind the screen.
+                </p>
+
+                <p>
+                    This portfolio was created to showcase our individual
+                    skills, interests, projects, and experiences as
+                    students. Instead of a report that nobody opens, we
+                    made a real website &mdash; one that runs on a server,
+                    responds to clicks, and looks the same on a phone.
+                </p>
+
+                <p>
+                    The whole group worked together on planning the pages,
+                    writing the content, building the layout in HTML and
+                    CSS, and wiring up the Django backend that serves it.
+                </p>
+
+
+                <h2>What we learned</h2>
+
+                <p>
+                    Creating this website taught us that programming is
+                    only one part of the job. Designing something other
+                    people can actually use taught us the rest.
+                </p>
+
+                <ul class="fact-list">
+                    <li>How Django handles requests, views, and URLs</li>
+                    <li>Using template inheritance so pages stay DRY</li>
+                    <li>Organising reusable HTML with an include tag</li>
+                    <li>Linking static CSS and images with the static tag</li>
+                    <li>Structuring pages with clean, semantic HTML</li>
+                    <li>Making a layout responsive on desktop and mobile</li>
+                    <li>Working together using Git and GitHub</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Right column: side panels -->
+            <div>
+
+                <div class="panel">
+
+                    <h2>
+                        Our Goals
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Keep improving our technical skills in web
+                            development and information technology.
+                        </li>
+                        <li>
+                            Gain more hands-on experience with Python,
+                            Django, and databases.
+                        </li>
+                        <li>
+                            Build a stronger understanding of software
+                            development, from planning to testing.
+                        </li>
+                        <li>
+                            Finish future projects that solve real
+                            problems for our school or community.
+                        </li>
+                        <li>
+                            Work well as a team and keep documenting what
+                            we learn along the way.
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>
+                        Where We Are Based
+                    </h2>
+
+                    <ul>
+                        <li>
+                            <strong>School:</strong> DMMMSU-NLUC
+                        </li>
+                        <li>
+                            <strong>College:</strong> College of
+                            Information Systems
+                        </li>
+                        <li>
+                            <strong>Location:</strong> Sapilang, Bacnotan,
+                            La Union
+                        </li>
+                        <li>
+                            <strong>Program:</strong> Information
+                            Systems
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ============ NEXT STEPS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="text-center mb-lg">
+
+            <span class="eyebrow">
+                Keep Exploring
+            </span>
+
+            <h2 class="section-title">
+                See the rest of the portfolio
+            </h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+                <h3>Our Members</h3>
+                <p>
+                    Read the full profile of each of the five students in
+                    the group.
+                </p>
+                <a href="{% url 'members' %}"
+                   class="feature-link">
+                    Meet our members &rarr;
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <h3>Our Skills</h3>
+                <p>
+                    The technologies we are learning and how we use them
+                    in this project.
+                </p>
+                <a href="{% url 'skills' %}"
+                   class="feature-link">
+                    View our skills &rarr;
+                </a>
+            </article>
+
+            <article class="feature-card">
+                <h3>Our Projects</h3>
+                <p>
+                    A look at what we have built and what we plan to build
+                    next.
+                </p>
+                <a href="{% url 'projects' %}"
+                   class="feature-link">
+                    View our projects &rarr;
+                </a>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

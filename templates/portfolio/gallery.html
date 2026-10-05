@@ -1,0 +1,214 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block title %}
+Gallery | Group Student Portfolio
+{% endblock %}
+
+{% block content %}
+
+<!-- ============ PAGE HEADER ============ -->
+
+<section class="page-header">
+
+    <h1>
+        Our Gallery
+    </h1>
+
+    <p>
+        Personal hobby photos representing what each of us enjoys outside
+        of class. These are separate from the profile pictures on the
+        Members page.
+    </p>
+
+</section>
+
+
+<!-- ============ HOBBY CARDS ============ -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Interests &amp; Hobbies
+        </h2>
+
+        <p class="section-intro mb-lg">
+            One photo per member, paired with the interests they shared
+            with the group.
+        </p>
+
+
+        <div class="gallery-grid">
+
+            <!-- EPHRAIM -->
+            <article class="gallery-item">
+
+                <div class="gallery-photo">
+
+                    <img src="{% static 'portfolio/images/ephraim_hobby.jpg' %}"
+                         alt="Hobby photo of Ephraim representing his love of anime, gaming, and PC hardware"
+                         width="1536"
+                         height="2048"
+                         loading="lazy">
+
+                </div>
+
+                <div class="gallery-content">
+
+                    <h3>
+                        Ephraim B. Balbalec Jr.
+                    </h3>
+
+                    <p class="gallery-interest">
+                        Anime, Gaming, and PC Hardware
+                    </p>
+
+                    <p>
+                        I enjoy watching anime, playing games, and
+                        learning about PC hardware and new technology.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARJAY -->
+            <article class="gallery-item">
+
+                <div class="gallery-photo">
+
+                    <img src="{% static 'portfolio/images/arjay_hobby.jpg' %}"
+                         alt="Hobby photo of Arjay representing his interest in online games and work"
+                         width="943"
+                         height="1668"
+                         loading="lazy">
+
+                </div>
+
+                <div class="gallery-content">
+
+                    <h3>
+                        Arjay M. Corpuz
+                    </h3>
+
+                    <p class="gallery-interest">
+                        Online Games and Work
+                    </p>
+
+                    <p>
+                        I enjoy playing online games and spending time
+                        working on things that interest me.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- VICTOR -->
+            <article class="gallery-item">
+
+                <div class="gallery-photo">
+
+                    <img src="{% static 'portfolio/images/victor_hobby.jpg' %}"
+                         alt="Hobby photo of Victor representing his interest in Marvel, gaming, and foreign languages"
+                         width="1536"
+                         height="2048"
+                         loading="lazy">
+
+                </div>
+
+                <div class="gallery-content">
+
+                    <h3>
+                        Victor Joseph M. Abad
+                    </h3>
+
+                    <p class="gallery-interest">
+                        Marvel, Gaming, and Foreign Languages
+                    </p>
+
+                    <p>
+                        I enjoy Marvel, playing games, and learning about
+                        foreign languages.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- LORENZ -->
+            <article class="gallery-item">
+
+                <div class="gallery-photo">
+
+                    <img src="{% static 'portfolio/images/lorenz_hobby.jpg' %}"
+                         alt="Hobby photo of Lorenz representing his interest in gaming, basketball, and Mobile Legends"
+                         width="1536"
+                         height="2048"
+                         loading="lazy">
+
+                </div>
+
+                <div class="gallery-content">
+
+                    <h3>
+                        Lorenz Dave Natura
+                    </h3>
+
+                    <p class="gallery-interest">
+                        Gaming, Basketball, and Mobile Legends
+                    </p>
+
+                    <p>
+                        I enjoy playing basketball, playing games, and
+                        playing Mobile Legends.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- JUSTINE -->
+            <article class="gallery-item">
+
+                <div class="gallery-photo">
+
+                    <img src="{% static 'portfolio/images/justine_hobby.jpg' %}"
+                         alt="Hobby photo of Justine representing her interest in gaming, chess, and Mobile Legends"
+                         width="1155"
+                         height="2048"
+                         loading="lazy">
+
+                </div>
+
+                <div class="gallery-content">
+
+                    <h3>
+                        Justine Howard P. Resurreccion
+                    </h3>
+
+                    <p class="gallery-interest">
+                        Gaming, Chess, and Mobile Legends
+                    </p>
+
+                    <p>
+                        I enjoy playing games, chess, and Mobile Legends.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

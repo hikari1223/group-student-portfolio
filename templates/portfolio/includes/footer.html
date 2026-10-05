@@ -1,0 +1,160 @@
+<!-- Reusable footer, included from portfolio/base.html -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <!-- About the group -->
+            <div class="footer-about">
+
+                <div class="footer-logo">
+
+                    <span class="logo-mark"
+                          aria-hidden="true">
+                        GSP
+                    </span>
+
+                    <span class="logo-text">
+
+                        <span class="logo-title">
+                            Group Student Portfolio
+                        </span>
+
+                        <span class="logo-subtitle">
+                            Five Students. One Journey.
+                        </span>
+
+                    </span>
+
+                </div>
+
+                <p>
+                    A group portfolio website created by five
+                    Information Systems students to showcase
+                    our skills, projects, and interests while
+                    learning Django and web development.
+                </p>
+
+            </div>
+
+
+            <!-- Quick links, built with the Django url tag -->
+            <nav class="footer-nav"
+                 aria-label="Footer navigation">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="{% url 'home' %}">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'about' %}">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'members' %}">
+                            Members
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'skills' %}">
+                            Skills
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'projects' %}">
+                            Projects
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'gallery' %}">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{% url 'contact' %}">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- School information -->
+            <div class="footer-contact">
+
+                <h3>
+                    School
+                </h3>
+
+                <ul class="footer-contact-list">
+
+                    <li>
+                        <strong>
+                            School:
+                        </strong>
+                        DMMMSU-NLUC
+                    </li>
+
+                    <li>
+                        <strong>
+                            College:
+                        </strong>
+                        College of Systems 
+                    </li>
+
+                    <li>
+                        <strong>
+                            Location:
+                        </strong>
+                        Sapilang, Bacnotan, La Union
+                    </li>
+
+                    <li>
+                        <strong>
+                            Program:
+                        </strong>
+                        Information Systems
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Group Student Portfolio.
+                All rights reserved.
+            </p>
+
+            <p>
+                DMMMSU-NLUC &middot;
+                College of Information Systems
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
