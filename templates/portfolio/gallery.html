@@ -8,26 +8,20 @@ Gallery | Group Student Portfolio
 {% block content %}
 
 <!-- ============ PAGE HEADER ============ -->
-
 <section class="page-header">
-
     <h1>
         Our Gallery
     </h1>
 
     <p>
-        Personal hobby photos representing what each of us enjoys outside
-        of class. These are separate from the profile pictures on the
-        Members page.
+        One hobby photo per member, paired with the interests they shared
+        with the group. These are the hobby photos only &mdash; the profile
+        pictures are on the Members page.
     </p>
-
 </section>
 
-
 <!-- ============ HOBBY CARDS ============ -->
-
 <section class="content-section">
-
     <div class="container">
 
         <h2 class="section-title">
@@ -35,180 +29,194 @@ Gallery | Group Student Portfolio
         </h2>
 
         <p class="section-intro mb-lg">
-            One photo per member, paired with the interests they shared
-            with the group.
+            The caption on each photo lists that member&rsquo;s interests.
+            Select any card to read the full profile on the Members page.
         </p>
-
 
         <div class="gallery-grid">
 
             <!-- EPHRAIM -->
             <article class="gallery-item">
-
-                <div class="gallery-photo">
-
+                <figure class="gallery-photo">
                     <img src="{% static 'portfolio/images/ephraim_hobby.jpg' %}"
-                         alt="Hobby photo of Ephraim representing his love of anime, gaming, and PC hardware"
+                         alt="Hobby photo of Ephraim, representing his interest in anime, gaming, and PC hardware"
                          width="1536"
                          height="2048"
-                         loading="lazy">
+                         loading="lazy"
+                         decoding="async">
 
-                </div>
+                    <figcaption class="gallery-caption">
+                        Anime &middot; Gaming &middot; PC Hardware
+                    </figcaption>
+                </figure>
 
                 <div class="gallery-content">
-
                     <h3>
                         Ephraim B. Balbalec Jr.
                     </h3>
 
-                    <p class="gallery-interest">
-                        Anime, Gaming, and PC Hardware
-                    </p>
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
 
                     <p>
-                        I enjoy watching anime, playing games, and
-                        learning about PC hardware and new technology.
+                        I enjoy watching anime, playing games, and learning
+                        about PC hardware and new technology.
                     </p>
 
+                    <a href="{% url 'members' %}#ephraim"
+                       class="feature-link">
+                        View Ephraim&rsquo;s profile &rarr;
+                    </a>
                 </div>
-
             </article>
-
 
             <!-- ARJAY -->
             <article class="gallery-item">
-
-                <div class="gallery-photo">
-
+                <figure class="gallery-photo">
                     <img src="{% static 'portfolio/images/arjay_hobby.jpg' %}"
-                         alt="Hobby photo of Arjay representing his interest in online games and work"
+                         alt="Hobby photo of Arjay, representing his interest in online games and work"
                          width="943"
                          height="1668"
-                         loading="lazy">
+                         loading="lazy"
+                         decoding="async">
 
-                </div>
+                    <figcaption class="gallery-caption">
+                        Online Games &middot; Work
+                    </figcaption>
+                </figure>
 
                 <div class="gallery-content">
-
                     <h3>
                         Arjay M. Corpuz
                     </h3>
 
-                    <p class="gallery-interest">
-                        Online Games and Work
-                    </p>
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
 
                     <p>
-                        I enjoy playing online games and spending time
-                        working on things that interest me.
+                        I enjoy playing online games and spending the rest of
+                        my free time on work that interests me.
                     </p>
 
+                    <a href="{% url 'members' %}#arjay"
+                       class="feature-link">
+                        View Arjay&rsquo;s profile &rarr;
+                    </a>
                 </div>
-
             </article>
-
 
             <!-- VICTOR -->
             <article class="gallery-item">
-
-                <div class="gallery-photo">
-
+                <figure class="gallery-photo">
                     <img src="{% static 'portfolio/images/victor_hobby.jpg' %}"
-                         alt="Hobby photo of Victor representing his interest in Marvel, gaming, and foreign languages"
+                         alt="Hobby photo of Victor, representing his interest in Marvel, gaming, and foreign languages"
                          width="1536"
                          height="2048"
-                         loading="lazy">
+                         loading="lazy"
+                         decoding="async">
 
-                </div>
+                    <figcaption class="gallery-caption">
+                        Marvel &middot; Gaming &middot; Foreign Languages
+                    </figcaption>
+                </figure>
 
                 <div class="gallery-content">
-
                     <h3>
                         Victor Joseph M. Abad
                     </h3>
 
-                    <p class="gallery-interest">
-                        Marvel, Gaming, and Foreign Languages
-                    </p>
+                    <span class="member-program">
+                        BSIT Student
+                    </span>
 
                     <p>
-                        I enjoy Marvel, playing games, and learning about
-                        foreign languages.
+                        I enjoy Marvel, playing games, and learning foreign
+                        languages in my own time.
                     </p>
 
+                    <a href="{% url 'members' %}#victor"
+                       class="feature-link">
+                        View Victor&rsquo;s profile &rarr;
+                    </a>
                 </div>
-
             </article>
-
 
             <!-- LORENZ -->
             <article class="gallery-item">
-
-                <div class="gallery-photo">
-
+                <figure class="gallery-photo">
                     <img src="{% static 'portfolio/images/lorenz_hobby.jpg' %}"
-                         alt="Hobby photo of Lorenz representing his interest in gaming, basketball, and Mobile Legends"
+                         alt="Hobby photo of Lorenz, representing his interest in gaming, basketball, and Mobile Legends"
                          width="1536"
                          height="2048"
-                         loading="lazy">
+                         loading="lazy"
+                         decoding="async">
 
-                </div>
+                    <figcaption class="gallery-caption">
+                        Gaming &middot; Basketball &middot; Mobile Legends
+                    </figcaption>
+                </figure>
 
                 <div class="gallery-content">
-
                     <h3>
                         Lorenz Dave Natura
                     </h3>
 
-                    <p class="gallery-interest">
-                        Gaming, Basketball, and Mobile Legends
-                    </p>
+                    <span class="member-program">
+                        BSIT Student
+                    </span>
 
                     <p>
                         I enjoy playing basketball, playing games, and
                         playing Mobile Legends.
                     </p>
 
+                    <a href="{% url 'members' %}#lorenz"
+                       class="feature-link">
+                        View Lorenz&rsquo;s profile &rarr;
+                    </a>
                 </div>
-
             </article>
-
 
             <!-- JUSTINE -->
             <article class="gallery-item">
-
-                <div class="gallery-photo">
-
+                <figure class="gallery-photo">
                     <img src="{% static 'portfolio/images/justine_hobby.jpg' %}"
-                         alt="Hobby photo of Justine representing her interest in gaming, chess, and Mobile Legends"
+                         alt="Hobby photo of Justine, representing her interest in gaming, chess, and Mobile Legends"
                          width="1155"
                          height="2048"
-                         loading="lazy">
+                         loading="lazy"
+                         decoding="async">
 
-                </div>
+                    <figcaption class="gallery-caption">
+                        Gaming &middot; Chess &middot; Mobile Legends
+                    </figcaption>
+                </figure>
 
                 <div class="gallery-content">
-
                     <h3>
                         Justine Howard P. Resurreccion
                     </h3>
 
-                    <p class="gallery-interest">
-                        Gaming, Chess, and Mobile Legends
-                    </p>
+                    <span class="member-program">
+                        BSIS Student
+                    </span>
 
                     <p>
                         I enjoy playing games, chess, and Mobile Legends.
                     </p>
 
+                    <a href="{% url 'members' %}#justine"
+                       class="feature-link">
+                        View Justine&rsquo;s profile &rarr;
+                    </a>
                 </div>
-
             </article>
 
         </div>
 
     </div>
-
 </section>
 
 {% endblock %}

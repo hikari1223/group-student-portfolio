@@ -484,7 +484,9 @@ textarea:focus-visible {
     margin-top: var(--space-md);
 }
 
-.tags span {
+/* a chip is a <span> for a label, or an <a> for a jump link */
+.tags span,
+.tags > a {
     background: var(--color-chip-bg);
     color: var(--color-primary-dark);
     border: 1px solid #d7e1f7;
@@ -492,6 +494,15 @@ textarea:focus-visible {
     border-radius: var(--radius-pill);
     font-size: 0.8rem;
     font-weight: 600;
+}
+
+.tags > a {
+    text-decoration: none;
+}
+
+.tags > a:hover {
+    border-color: var(--color-primary-light);
+    text-decoration: underline;
 }
 
 .tag-label {
@@ -834,7 +845,10 @@ textarea:focus-visible {
 .member-photo {
     position: relative;
     aspect-ratio: 4 / 5;
-    background: var(--color-navy-700);
+    /* the soft backdrop shows through the empty space around a photo
+       that does not fill the frame, so it looks like a studio mat */
+    background-color: var(--color-navy-700);
+    background-image: radial-gradient(circle at 50% 35%, #25345c 0%, var(--color-navy-700) 70%);
     overflow: hidden;
 }
 
@@ -876,6 +890,33 @@ textarea:focus-visible {
     margin-bottom: 0.2rem;
 }
 
+/* the name is a link to that member's full profile further down */
+.member-content h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.member-content h3 a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/*
+   Program and year level for one member. The rows reuse the .meta-row
+   style from section 12, the same one used on the project cards.
+*/
+.card-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: var(--space-md);
+}
+
+.card-meta .meta-row {
+    padding-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
 .member-program {
     display: inline-block;
     align-self: flex-start;
@@ -910,6 +951,17 @@ textarea:focus-visible {
     margin-bottom: var(--space-md);
 }
 
+/*
+   Two columns on a wide screen, so the five profiles do not become one
+   very long list. It becomes a single column on phones (section 17).
+*/
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
 .profile-box {
     scroll-margin-top: calc(var(--nav-height) + 20px);
     background: var(--color-surface);
@@ -917,7 +969,6 @@ textarea:focus-visible {
     border-left: 5px solid var(--color-primary);
     border-radius: var(--radius-md);
     padding: var(--space-lg);
-    margin-bottom: var(--space-md);
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
 }
@@ -1182,7 +1233,9 @@ textarea:focus-visible {
     position: relative;
     aspect-ratio: 3 / 4;
     overflow: hidden;
-    background: var(--color-navy-700);
+    /* the same soft studio backdrop as the profile photos */
+    background-color: var(--color-navy-700);
+    background-image: radial-gradient(circle at 50% 35%, #25345c 0%, var(--color-navy-700) 70%);
 }
 
 .gallery-photo img {
@@ -1192,6 +1245,25 @@ textarea:focus-visible {
 }
 
 /* no zoom here, because zooming would crop the edges of the photo */
+
+/*
+   The caption lists the member's interests. It sits on a dark gradient
+   over the bottom of the photo, so the white text stays readable no
+   matter what the picture looks like.
+*/
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 2.75rem var(--space-md) var(--space-md);
+    background: linear-gradient(to top, rgba(11, 18, 32, 0.94), rgba(11, 18, 32, 0));
+    color: var(--color-text-inverse);
+    font-size: 0.86rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
 
 .gallery-content {
     display: flex;
@@ -1205,17 +1277,13 @@ textarea:focus-visible {
     margin-bottom: 0.35rem;
 }
 
-.gallery-interest {
-    color: var(--color-primary-dark);
-    font-weight: 700;
-    font-size: 0.94rem;
-    margin-bottom: var(--space-sm);
-}
-
-.gallery-content p:last-of-type {
+.gallery-content p {
     color: var(--color-text-muted);
     font-size: 0.96rem;
     margin-bottom: 0;
+    /* the description grows, so the link below stays aligned
+       at the bottom of every card */
+    flex: 1;
 }
 
 
@@ -1635,6 +1703,12 @@ textarea:focus-visible {
     /* one column: the story, then the panels, then the form */
     .split,
     .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* a profile box is a narrow column, so it goes full width on a
+       tablet as well - the chips then have room to breathe */
+    .profile-grid {
         grid-template-columns: 1fr;
     }
 
