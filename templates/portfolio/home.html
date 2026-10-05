@@ -7,9 +7,7 @@ Home | Group Student Portfolio
 {% block content %}
 
 <!-- ============ HERO ============ -->
-
 <section class="hero">
-
     <div class="hero-content">
 
         <p class="hero-badge">
@@ -22,15 +20,14 @@ Home | Group Student Portfolio
         </h1>
 
         <p class="hero-text">
-            We are five Information Systems students building our
-            skills in web development, programming, and technology.
-            This portfolio brings together our profiles, the tools we
-            are learning, the projects we are working on, and the
-            interests that keep us curious outside the classroom.
+            We are five Information Systems and Information Technology
+            students at DMMMSU-NLUC. This portfolio is how we share what we
+            have learned so far: our profiles, the tools we are learning,
+            the projects we are building, and the interests that keep us
+            curious outside the classroom.
         </p>
 
         <div class="hero-buttons">
-
             <a href="{% url 'members' %}"
                class="button button-light">
                 Meet Our Team
@@ -40,10 +37,9 @@ Home | Group Student Portfolio
                class="button button-inverse">
                 View Projects
             </a>
-
         </div>
 
-        <!-- quick facts -->
+        <!-- quick facts about the group and the website -->
         <div class="hero-facts">
 
             <div class="hero-fact">
@@ -69,18 +65,13 @@ Home | Group Student Portfolio
         </div>
 
     </div>
-
 </section>
 
-
 <!-- ============ WHAT THIS SITE IS ABOUT ============ -->
-
 <section class="intro-section">
-
     <div class="container">
 
         <div class="text-center">
-
             <span class="eyebrow">
                 Our Student Portfolio
             </span>
@@ -91,19 +82,16 @@ Home | Group Student Portfolio
 
             <p class="section-intro">
                 This website presents the profiles of five students from
-                the College of Information Systems. Every page was
-                created to show what we have learned so far and what we
-                are still working on.
+                the College of Information Systems. Every page was created
+                to show what we have learned so far and what we are still
+                working on.
             </p>
-
         </div>
-
 
         <div class="feature-grid">
 
             <!-- Our Skills -->
             <article class="feature-card">
-
                 <span class="feature-icon"
                       aria-hidden="true">
                     01
@@ -114,22 +102,19 @@ Home | Group Student Portfolio
                 </h3>
 
                 <p>
-                    We are building our knowledge in HTML, CSS, Python,
-                    Django, Git, Ai, and GitHub &mdash; the tools we use to
-                    turn ideas into working websites.
+                    We are learning HTML, CSS, Python, Django, Git, and
+                    GitHub &mdash; the tools we use to turn ideas into
+                    websites that actually run.
                 </p>
 
                 <a href="{% url 'skills' %}"
                    class="feature-link">
                     See our skills &rarr;
                 </a>
-
             </article>
-
 
             <!-- Our Projects -->
             <article class="feature-card">
-
                 <span class="feature-icon"
                       aria-hidden="true">
                     02
@@ -140,21 +125,18 @@ Home | Group Student Portfolio
                 </h3>
 
                 <p>
-                    We showcase the school projects we have completed so
-                    far, together with the ideas we plan to build next.
+                    We showcase the projects we have completed so far,
+                    together with the ideas we are planning to build next.
                 </p>
 
                 <a href="{% url 'projects' %}"
                    class="feature-link">
                     View our projects &rarr;
                 </a>
-
             </article>
-
 
             <!-- Our Journey -->
             <article class="feature-card">
-
                 <span class="feature-icon"
                       aria-hidden="true">
                     03
@@ -165,38 +147,177 @@ Home | Group Student Portfolio
                 </h3>
 
                 <p>
-                    We started with the basics and we keep learning,
-                    practising, and improving our skills as IS students.
+                    We started with the basics, and we keep learning,
+                    practising, and improving our skills as Information
+                    Systems students.
                 </p>
 
                 <a href="{% url 'about' %}"
                    class="feature-link">
                     Read our story &rarr;
                 </a>
-
             </article>
 
         </div>
 
     </div>
-
 </section>
 
-
-<!-- ============ MEET THE TEAM / HOBBIES STRIP ============ -->
-
+<!-- ============ MEET THE GROUP ============ -->
 <section class="content-section">
+    <div class="container">
 
+        <div class="text-center mb-lg">
+            <span class="eyebrow">
+                Meet the Group
+            </span>
+
+            <h2 class="section-title">
+                The five of us
+            </h2>
+
+            <p class="section-intro">
+                Three BSIS students and two BSIT students, each with our
+                own interests and our own way of learning &mdash; and one
+                shared goal of understanding how technology is built.
+            </p>
+        </div>
+
+        <div class="feature-grid">
+
+            <!-- Ephraim -->
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    E
+                </span>
+
+                <h3>
+                    Ephraim B. Balbalec Jr.
+                </h3>
+
+                <p>
+                    BSIS &middot; Web development, anime, gaming, and
+                    learning how PC hardware works.
+                </p>
+
+                <a href="{% url 'members' %}#ephraim"
+                   class="feature-link">
+                    View profile &rarr;
+                </a>
+            </article>
+
+            <!-- Arjay -->
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    A
+                </span>
+
+                <h3>
+                    Arjay M. Corpuz
+                </h3>
+
+                <p>
+                    BSIS &middot; Web development, online games, and
+                    balancing work with free time.
+                </p>
+
+                <a href="{% url 'members' %}#arjay"
+                   class="feature-link">
+                    View profile &rarr;
+                </a>
+            </article>
+
+            <!-- Victor -->
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    V
+                </span>
+
+                <h3>
+                    Victor Joseph M. Abad
+                </h3>
+
+                <p>
+                    BSIT &middot; Marvel, gaming, foreign languages, and
+                    the technology behind the screen.
+                </p>
+
+                <a href="{% url 'members' %}#victor"
+                   class="feature-link">
+                    View profile &rarr;
+                </a>
+            </article>
+
+            <!-- Lorenz -->
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    L
+                </span>
+
+                <h3>
+                    Lorenz Dave Natura
+                </h3>
+
+                <p>
+                    BSIT &middot; Web development, basketball, and Mobile
+                    Legends between classes.
+                </p>
+
+                <a href="{% url 'members' %}#lorenz"
+                   class="feature-link">
+                    View profile &rarr;
+                </a>
+            </article>
+
+            <!-- Justine -->
+            <article class="feature-card">
+                <span class="feature-icon"
+                      aria-hidden="true">
+                    J
+                </span>
+
+                <h3>
+                    Justine Howard P. Resurreccion
+                </h3>
+
+                <p>
+                    BSIS &middot; Software development, computer hardware,
+                    chess, and Mobile Legends.
+                </p>
+
+                <a href="{% url 'members' %}#justine"
+                   class="feature-link">
+                    View profile &rarr;
+                </a>
+            </article>
+
+        </div>
+
+        <p class="text-center mt-lg">
+            <a href="{% url 'members' %}"
+               class="button button-outline">
+                Read all member profiles
+            </a>
+        </p>
+
+    </div>
+</section>
+
+<!-- ============ BEYOND THE SCREEN ============ -->
+<section class="content-section">
     <div class="container">
 
         <div class="text-center">
-
             <span class="eyebrow">
                 Beyond the Screen
             </span>
 
             <h2 class="section-title">
-                Get to know the people behind the code
+                What we enjoy outside of class
             </h2>
 
             <p class="section-intro">
@@ -204,19 +325,20 @@ Home | Group Student Portfolio
                 can see both what we study and what we enjoy doing in our
                 free time.
             </p>
-
         </div>
 
         <div class="feature-grid">
 
             <article class="feature-card">
                 <h3>
-                    Member Profiles
+                    Full Profiles
                 </h3>
+
                 <p>
                     Names, programs, skills, and interests for all five of
-                    us in one place.
+                    us, with a short introduction from each member.
                 </p>
+
                 <a href="{% url 'members' %}"
                    class="feature-link">
                     Meet our members &rarr;
@@ -227,10 +349,12 @@ Home | Group Student Portfolio
                 <h3>
                     Our Interests
                 </h3>
+
                 <p>
-                    Anime, online games, Marvel, basketball, chess,
-                    and PC hardware are part of life outside class.
+                    Anime, online games, Marvel, basketball, chess, and PC
+                    hardware are part of life outside class.
                 </p>
+
                 <a href="{% url 'gallery' %}"
                    class="feature-link">
                     Open the gallery &rarr;
@@ -241,10 +365,12 @@ Home | Group Student Portfolio
                 <h3>
                     Talk to Us
                 </h3>
+
                 <p>
                     Questions about the project, our school, or our work?
                     Send us a message.
                 </p>
+
                 <a href="{% url 'contact' %}"
                    class="feature-link">
                     Contact the group &rarr;
@@ -254,7 +380,6 @@ Home | Group Student Portfolio
         </div>
 
     </div>
-
 </section>
 
 {% endblock %}

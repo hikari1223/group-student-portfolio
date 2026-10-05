@@ -7,25 +7,19 @@ About Us | Group Student Portfolio
 {% block content %}
 
 <!-- ============ PAGE HEADER ============ -->
-
 <section class="page-header">
-
     <h1>
         About Our Group
     </h1>
 
     <p>
-        Five Information Systems students from DMMMSU-NLUC,
-        learning technology by building something real.
+        Five Information Systems and Information Technology students from
+        DMMMSU-NLUC, learning technology by building something real.
     </p>
-
 </section>
 
-
 <!-- ============ QUICK FACTS ============ -->
-
 <section class="content-section">
-
     <div class="container">
 
         <div class="fact-grid">
@@ -46,23 +40,18 @@ About Us | Group Student Portfolio
             </div>
 
             <div class="fact-card">
-                <span class="fact-value">1</span>
-                <span class="fact-label">Shared Goal</span>
+                <span class="fact-value">2</span>
+                <span class="fact-label">Programs (BSIS &amp; BSIT)</span>
             </div>
 
         </div>
 
     </div>
-
 </section>
 
-
-<!-- ============ WHO WE ARE + WHAT WE LEARNED ============ -->
-
+<!-- ============ WHO WE ARE + SIDE PANELS ============ -->
 <section class="content-section">
-
     <div class="container">
-
         <div class="split">
 
             <!-- Left column: the story -->
@@ -77,20 +66,21 @@ About Us | Group Student Portfolio
                 </h2>
 
                 <p class="lead">
-                    We are a group of five students studying
-                    Information Systems-related programs at
-                    DMMMSU-NLUC, under the College of Information
-                    Technology. We come from different backgrounds,
-                    but we share the same interest in how technology
-                    works behind the screen.
+                    We are five students taking Information Systems and
+                    Information Technology at DMMMSU-NLUC, under the
+                    College of Information Systems. We come from different
+                    backgrounds and study different programs, but we share
+                    the same curiosity about how technology works behind
+                    the screen.
                 </p>
 
                 <p>
-                    This portfolio was created to showcase our individual
+                    This portfolio exists to document our individual
                     skills, interests, projects, and experiences as
-                    students. Instead of a report that nobody opens, we
-                    made a real website &mdash; one that runs on a server,
-                    responds to clicks, and looks the same on a phone.
+                    students. Instead of handing in a report that nobody
+                    opens, we built a working website &mdash; one that
+                    runs on a server, answers clicks, and looks the same on
+                    a phone.
                 </p>
 
                 <p>
@@ -99,11 +89,10 @@ About Us | Group Student Portfolio
                     CSS, and wiring up the Django backend that serves it.
                 </p>
 
-
                 <h2>What we learned</h2>
 
                 <p>
-                    Creating this website taught us that programming is
+                    Building this website taught us that programming is
                     only one part of the job. Designing something other
                     people can actually use taught us the rest.
                 </p>
@@ -120,12 +109,10 @@ About Us | Group Student Portfolio
 
             </div>
 
-
             <!-- Right column: side panels -->
             <div>
 
                 <div class="panel">
-
                     <h2>
                         Our Goals
                     </h2>
@@ -144,22 +131,19 @@ About Us | Group Student Portfolio
                             development, from planning to testing.
                         </li>
                         <li>
-                            Finish future projects that solve real
-                            problems for our school or community.
+                            Finish future projects that solve real problems
+                            for our school or community.
                         </li>
                         <li>
-                            Work well as a team and keep documenting what
-                            we learn along the way.
+                            Work well as a team and keep documenting what we
+                            learn along the way.
                         </li>
                     </ul>
-
                 </div>
 
-
                 <div class="panel">
-
                     <h2>
-                        Where We Are Based
+                        Our School
                     </h2>
 
                     <ul>
@@ -167,38 +151,56 @@ About Us | Group Student Portfolio
                             <strong>School:</strong> DMMMSU-NLUC
                         </li>
                         <li>
-                            <strong>College:</strong> College of
-                            Information Systems
+                            <strong>College:</strong> College of Information
+                            Systems
                         </li>
                         <li>
                             <strong>Location:</strong> Sapilang, Bacnotan,
                             La Union
                         </li>
                         <li>
-                            <strong>Program:</strong> Information
-                            Systems
+                            <strong>Programs:</strong> Information Systems
+                            (BSIS) and Information Technology (BSIT)
                         </li>
                     </ul>
+                </div>
 
+                <div class="panel">
+                    <h2>
+                        Built With
+                    </h2>
+
+                    <p>
+                        The same six tools we are learning in class are the
+                        ones behind this website.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
+                    </div>
+
+                    <a href="{% url 'skills' %}"
+                       class="feature-link">
+                        Read about our skills &rarr;
+                    </a>
                 </div>
 
             </div>
 
         </div>
-
     </div>
-
 </section>
 
-
 <!-- ============ NEXT STEPS ============ -->
-
 <section class="content-section">
-
     <div class="container">
 
         <div class="text-center mb-lg">
-
             <span class="eyebrow">
                 Keep Exploring
             </span>
@@ -206,7 +208,6 @@ About Us | Group Student Portfolio
             <h2 class="section-title">
                 See the rest of the portfolio
             </h2>
-
         </div>
 
         <div class="feature-grid">
@@ -215,7 +216,7 @@ About Us | Group Student Portfolio
                 <h3>Our Members</h3>
                 <p>
                     Read the full profile of each of the five students in
-                    the group.
+                    the group, with their skills and interests.
                 </p>
                 <a href="{% url 'members' %}"
                    class="feature-link">
@@ -226,8 +227,8 @@ About Us | Group Student Portfolio
             <article class="feature-card">
                 <h3>Our Skills</h3>
                 <p>
-                    The technologies we are learning and how we use them
-                    in this project.
+                    The technologies we are learning and how we use them in
+                    this project.
                 </p>
                 <a href="{% url 'skills' %}"
                    class="feature-link">
@@ -249,8 +250,14 @@ About Us | Group Student Portfolio
 
         </div>
 
-    </div>
+        <p class="text-center mt-lg">
+            <a href="{% url 'contact' %}"
+               class="button button-outline">
+                Send us a message
+            </a>
+        </p>
 
+    </div>
 </section>
 
 {% endblock %}

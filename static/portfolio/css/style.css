@@ -340,6 +340,12 @@ textarea:focus-visible {
     margin-bottom: var(--space-sm);
 }
 
+.panel p {
+    color: var(--color-text-muted);
+    font-size: 0.97rem;
+    margin-bottom: 0;
+}
+
 .panel ul {
     list-style: none;
 }
@@ -817,11 +823,12 @@ textarea:focus-visible {
 
 /* no zoom, because zooming would crop the edges of the photo */
 
-/* initial badge over the photo */
+/* initial badge, placed inside the photo so it is not clipped
+   by the member-photo overflow */
 .member-initial {
     position: absolute;
     left: var(--space-md);
-    bottom: -18px;
+    bottom: var(--space-sm);
     display: grid;
     place-items: center;
     width: 44px;
