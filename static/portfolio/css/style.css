@@ -92,6 +92,8 @@ html {
     scroll-behavior: smooth;
     /* keeps anchored profile sections clear of the sticky navbar */
     scroll-padding-top: calc(var(--nav-height) + 16px);
+    /* stops mobile Safari from enlarging text when the window is rotated */
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -105,6 +107,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* long words break instead of pushing a narrow screen sideways */
+    overflow-wrap: break-word;
 }
 
 img {
@@ -196,6 +200,22 @@ textarea:focus-visible {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
+}
+
+/*
+   min-width: 0 lets a long word or a wide child shrink inside a grid or
+   flex column instead of forcing the whole page to scroll sideways.
+*/
+.split > *,
+.feature-card,
+.skill-card,
+.member-card,
+.project-card,
+.gallery-item,
+.fact-card,
+.contact-info,
+.contact-form {
+    min-width: 0;
 }
 
 .content-section {
@@ -386,6 +406,7 @@ textarea:focus-visible {
     font-size: 0.98rem;
     font-weight: 600;
     line-height: 1.2;
+    text-align: center;
     border: 2px solid var(--color-primary);
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -447,6 +468,7 @@ textarea:focus-visible {
 
 .button-block {
     display: block;
+    width: 100%;
     text-align: center;
 }
 
@@ -803,21 +825,22 @@ textarea:focus-visible {
     border-color: var(--color-primary-light);
 }
 
-/* consistent, undistorted profile photos */
+/*
+   Every profile photo sits in the same 4:5 frame. The frame keeps all
+   five cards the same height on every screen size, and object-fit:contain
+   shows the WHOLE photo, so a face is never cropped. The dark background
+   fills the empty space like a photo mat.
+*/
 .member-photo {
     position: relative;
+    aspect-ratio: 4 / 5;
     background: var(--color-navy-700);
     overflow: hidden;
 }
 
-/*
-   height:auto shows the WHOLE photo at any screen size, so nothing is
-   cropped. object-fit:contain is a safety net in case max-height kicks in.
-*/
 .member-photo img {
     width: 100%;
-    height: auto;
-    max-height: 480px;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -1126,9 +1149,11 @@ textarea:focus-visible {
    13. GALLERY
    ========================================================= */
 
+/* Three columns on a wide screen, so the photos stay a comfortable
+   size instead of becoming huge and letterboxed. */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
 }
 
@@ -1149,17 +1174,20 @@ textarea:focus-visible {
     border-color: var(--color-primary-light);
 }
 
+/*
+   Same idea as the member photos: a fixed 3:4 frame keeps every card the
+   same height, and object-fit:contain shows the whole hobby photo.
+*/
 .gallery-photo {
     position: relative;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     background: var(--color-navy-700);
 }
 
-/* large photos, always shown in full - height:auto avoids cropping */
 .gallery-photo img {
     width: 100%;
-    height: auto;
-    max-height: 620px;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -1499,7 +1527,17 @@ textarea:focus-visible {
 
 /* =========================================================
    17. RESPONSIVE
-   Tested around 1200px, 900px and 600px.
+   ---------------------------------------------------------
+   The rules are written from the widest screen downwards, so a
+   phone only needs the last block.
+
+   1200px - small laptops: wider container, tighter gaps
+   900px  - tablets: navbar stacks, every card grid drops to 2 columns
+   600px  - phones: 1 column, full-width buttons, tighter spacing,
+            larger form text
+
+   The photo frames use aspect-ratio, so the member and gallery
+   pictures resize on their own and never need a size per screen.
    ========================================================= */
 
 /* ---- Large desktop / laptop ---- */
@@ -1512,7 +1550,12 @@ textarea:focus-visible {
     }
 
     .member-grid,
-    .project-grid {
+    .project-grid,
+    .gallery-grid {
+        gap: var(--space-md);
+    }
+
+    .split {
         gap: var(--space-md);
     }
 }
@@ -1521,12 +1564,23 @@ textarea:focus-visible {
 /* ---- Tablet ---- */
 @media (max-width: 900px) {
 
+    /* smaller vertical rhythm so pages do not feel endless */
     :root {
         --space-2xl: 3.25rem;
+        --space-xl: 2.5rem;
     }
 
+    /*
+       The navbar is no longer sticky on small screens, so it can no
+       longer cover the top of a page. Because of that, anchored
+       sections no longer need the extra sticky-navbar offset.
+    */
     .navbar {
         position: static;
+    }
+
+    html {
+        scroll-padding-top: var(--space-md);
     }
 
     .nav-container {
@@ -1536,14 +1590,20 @@ textarea:focus-visible {
         gap: var(--space-sm);
     }
 
+    /* the links wrap into rows: a bigger gap between rows than
+       between links keeps the wrapped navbar tidy */
     .nav-links {
         justify-content: center;
-        gap: 0.25rem;
+        gap: 0.5rem 0.25rem;
     }
 
     .nav-links a {
         padding: 0.45rem 0.7rem;
         font-size: 0.9rem;
+    }
+
+    .nav-links a.nav-cta {
+        margin-left: 0;
     }
 
     .hero {
@@ -1554,22 +1614,25 @@ textarea:focus-visible {
         max-width: 100%;
     }
 
+    /* the small number cards stay in two columns */
     .fact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* every card grid becomes two columns */
     .feature-grid,
     .skills-grid,
     .member-grid,
-    .project-grid {
+    .project-grid,
+    .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
     }
 
+    /* one column: the story, then the panels, then the form */
     .split,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1588,6 +1651,13 @@ textarea:focus-visible {
 /* ---- Mobile ---- */
 @media (max-width: 600px) {
 
+    /* tighter spacing on a small screen */
+    :root {
+        --space-2xl: 2.5rem;
+        --space-xl: 2rem;
+        --space-lg: 1.5rem;
+    }
+
     body {
         font-size: 15.5px;
     }
@@ -1598,13 +1668,28 @@ textarea:focus-visible {
         width: 94%;
     }
 
+    /* the navbar wraps into two centred rows and stays readable */
     .nav-links {
-        gap: 0.2rem;
+        gap: 0.35rem 0.2rem;
     }
 
     .nav-links a {
         font-size: 0.85rem;
-        padding: 0.4rem 0.55rem;
+        padding: 0.55rem 0.6rem;
+    }
+
+    .nav-links a.nav-cta {
+        padding: 0.5rem 0.85rem;
+    }
+
+    .logo {
+        gap: 0.55rem;
+    }
+
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
     }
 
     .logo-title {
@@ -1615,6 +1700,13 @@ textarea:focus-visible {
         font-size: 2.1rem;
     }
 
+    /* the badge is long, so let it wrap neatly on a narrow screen */
+    .hero-badge {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
     .hero-text {
         font-size: 1rem;
     }
@@ -1623,12 +1715,10 @@ textarea:focus-visible {
         width: 100%;
     }
 
-    .hero-buttons .button {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
+    /* two even rows instead of an uneven wrap */
     .hero-facts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-md);
     }
 
@@ -1636,7 +1726,7 @@ textarea:focus-visible {
         padding: var(--space-lg) var(--space-md);
     }
 
-    .fact-grid,
+    /* one column for every card grid */
     .feature-grid,
     .skills-grid,
     .member-grid,
@@ -1646,13 +1736,29 @@ textarea:focus-visible {
         grid-template-columns: 1fr;
     }
 
-    /* on phones the whole photo is still shown, just capped a little higher */
-    .member-photo img {
-        max-height: 560px;
+    /* the number cards stay 2 x 2, so they do not need a long scroll */
+    .fact-grid {
+        gap: var(--space-sm);
     }
 
-    .gallery-photo img {
-        max-height: 520px;
+    .fact-value {
+        font-size: 1.6rem;
+    }
+
+    .fact-card {
+        padding: var(--space-sm);
+    }
+
+    /* smaller padding so the cards do not waste phone screen space */
+    .feature-card,
+    .skill-card {
+        padding: var(--space-md);
+    }
+
+    .member-content,
+    .gallery-content,
+    .project-body {
+        padding: var(--space-md) var(--space-md) var(--space-sm);
     }
 
     .contact-info,
@@ -1662,13 +1768,59 @@ textarea:focus-visible {
         padding: var(--space-md);
     }
 
-    .contact-form .button {
+    .profile-details {
+        margin-top: var(--space-lg);
+        padding-top: var(--space-md);
+    }
+
+    /* every button uses the full width: easier to tap, never overflows */
+    .button {
         width: 100%;
+        padding: 0.85rem 1.4rem;
+    }
+
+    /* the small card button keeps its size but gets a taller tap area */
+    .button-sm {
+        padding: 0.75rem 1.1rem;
+    }
+
+    .hero-buttons .button {
+        flex: 1 1 100%;
+    }
+
+    /*
+       16px form text stops mobile browsers from zooming in the page
+       as soon as a field is focused.
+    */
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 0.85rem 0.95rem;
+    }
+
+    /* long values wrap under their label instead of squeezing */
+    .meta-row {
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    .meta-row dd {
+        text-align: left;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
+    }
+
+    /* a slightly bigger tap area for the footer links */
+    .footer-links a {
+        display: inline-block;
+        padding: 0.2rem 0;
+    }
+
+    .footer-about p {
+        max-width: none;
     }
 
     .footer-bottom {
