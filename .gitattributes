@@ -1,0 +1,21 @@
+# Normalise line endings so the project behaves the same on Windows, macOS and Linux.
+# Without this, a teammate on a different OS can get different whitespace in the
+# working tree, which makes the "what changed" diff noisy and hard to read.
+* text=auto eol=lf
+
+*.py    text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.txt   text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+
+# Binary files - never touch these
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.gif   binary
+*.ico   binary
+*.sqlite3 binary
