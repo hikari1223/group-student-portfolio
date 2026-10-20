@@ -4,3 +4,8 @@ __pycache__/
 db.sqlite3
 .env
 .vscode/
+
+# local helper scripts - kept on this machine only
+restore.py
+setup.bat
+setup.sh
